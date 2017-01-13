@@ -6,6 +6,7 @@
             "email": "Fredrik.Larsson@jenseneducation.se"
         }
     ],
+    "version": "1.0.0",
     "minimum-stability": "stable",
     "require": {},
   	"autoload": {
