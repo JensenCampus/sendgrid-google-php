@@ -136,8 +136,10 @@ class SendGrid
       $this->_arrayToUrlPart($mail->getCcs(), "cc");
 
     $context = array("http"=>
-                 array("method" => "POST",
-                   "content" => http_build_query($data)));
+                 array(
+                    'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
+                    "method" => "POST",
+                    "content" => http_build_query($data)));
 
     $context = stream_context_create($context);
     $response = file_get_contents($request, false, $context);
